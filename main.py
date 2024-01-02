@@ -61,7 +61,7 @@ def upload():
 # untuk mendapatkan beberapa data dari dataset
 @app.route('/get/<key>', methods=['GET'])
 # buat method untuk mendapatkan data
-def score(key):
+def get(key):
     # ambil data dari session sesuai key yang diberikan
     sess = session.get(key, None)
     # buat path untuk mengambil file dari penyimpanan
@@ -103,7 +103,7 @@ def predict(key):
 # untuk mendapatkan nilai akurasi dari dataset
 @app.route('/score/<key>', methods=['GET'])
 # buat method baru untuk route score
-def getScore(key):
+def score(key):
     # dapatkan data dari session sesuai key yang dikirim
     sess = session.get(key, None)
     # buat path menuju file dataset sesuai key
